@@ -28,7 +28,7 @@ const ChefShowcase = () => {
             productCard: {
                 name: 'Pão Artesanal',
                 price: 'R$ 8,50/un',
-                image: '/images/cardapio/cardapio_img_1.png'
+                image: '/images/image_10.jpg'
             }
         }
     ];
@@ -89,9 +89,12 @@ const ChefShowcase = () => {
                                                 <div className="text-sm text-gray-600 font-medium">{chef.productCard.price}</div>
                                             </div>
                                         </div>
-                                        <button className="mt-3 w-full bg-monza-red text-white text-sm font-semibold py-2.5 rounded-button hover:bg-monza-dark transition-all duration-300 hover:scale-105">
-                                            Adicionar
-                                        </button>
+                                        <a
+                                            href="https://api.whatsapp.com/send?phone=5527999999999&text=Gostaria%20de%20ver%20o%20card%C3%A1pio"
+                                            className="mt-3 w-full bg-monza-red text-white text-sm font-semibold py-2.5 rounded-button hover:bg-monza-dark transition-all duration-300 hover:scale-105 inline-block text-center"
+                                        >
+                                            Cardápio
+                                        </a>
                                     </div>
                                 )}
                             </div>
