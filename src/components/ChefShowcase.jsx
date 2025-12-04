@@ -26,9 +26,9 @@ const ChefShowcase = () => {
             description: 'Aqui, cada criação nasce do cuidado, da técnica e do olhar atento dos nossos especialistas. Do forno à sua mesa, oferecemos produtos que celebram qualidade, tradição e o prazer de saborear algo realmente bem-feito.',
             position: 'right',
             productCard: {
-                name: 'Doughnut',
-                price: '$3.55/Slice',
-                image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?w=200&h=200&fit=crop'
+                name: 'Pão Artesanal',
+                price: 'R$ 8,50/un',
+                image: '/images/cardapio/cardapio_img_1.png'
             }
         }
     ];
