@@ -34,24 +34,24 @@ const ChefShowcase = () => {
     ];
 
     return (
-        <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+        <section className="py-20 bg-monza-cream/30">
             <div className="max-w-7xl mx-auto px-4">
                 {chefs.map((chef, index) => (
                     <div
                         key={chef.id}
                         className={`flex flex-col ${chef.position === 'left' ? 'lg:flex-row' : 'lg:flex-row-reverse'
-                            } items-center gap-12 mb-32 last:mb-0`}
+                            } items-center gap-16 mb-32 last:mb-0`}
                     >
                         {/* Chef Image Section */}
                         <div className="lg:w-1/2 relative">
                             <div className="relative">
                                 {/* Decorative Circle */}
                                 <div className={`absolute ${chef.position === 'left' ? 'left-0' : 'right-0'
-                                    } top-1/2 -translate-y-1/2 w-[400px] h-[400px] border-[3px] border-black rounded-full ${chef.position === 'left' ? '-translate-x-12' : 'translate-x-12'
+                                    } top-1/2 -translate-y-1/2 w-[400px] h-[400px] border-[4px] border-monza-red rounded-full ${chef.position === 'left' ? '-translate-x-12' : 'translate-x-12'
                                     }`} />
 
                                 {/* Chef Image */}
-                                <div className="relative z-10 w-[380px] h-[380px] mx-auto rounded-full overflow-hidden shadow-2xl">
+                                <div className="relative z-10 w-[380px] h-[380px] mx-auto rounded-full overflow-hidden shadow-card">
                                     <img
                                         src={chef.image}
                                         alt={chef.name}
@@ -61,23 +61,23 @@ const ChefShowcase = () => {
 
                                 {/* Floating Rating Card */}
                                 <div className={`absolute ${chef.position === 'left' ? 'right-8 top-12' : 'left-8 top-12'
-                                    } bg-white rounded-2xl shadow-xl p-4 z-20 animate-float`}>
-                                    <div className="flex items-center gap-2 mb-2">
-                                        <div className="w-10 h-10 bg-orange-400 rounded-lg flex items-center justify-center">
+                                    } bg-white rounded-card shadow-card p-5 z-20 animate-float border border-monza-cream`}>
+                                    <div className="flex items-center gap-3 mb-2">
+                                        <div className="w-12 h-12 bg-monza-red rounded-2xl flex items-center justify-center">
                                             <Star className="w-6 h-6 text-white fill-white" />
                                         </div>
                                         <div>
-                                            <div className="text-sm font-semibold text-gray-800">{chef.rating}/5</div>
+                                            <div className="text-lg font-bold text-monza-brown">{chef.rating}/5</div>
                                         </div>
                                     </div>
-                                    <div className="text-sm font-medium text-gray-600">{chef.ratingLabel}</div>
+                                    <div className="text-sm font-semibold text-monza-red">{chef.ratingLabel}</div>
                                 </div>
 
                                 {/* Floating Product Card */}
                                 {chef.productCard && chef.position === 'right' && (
-                                    <div className="absolute right-0 bottom-16 bg-white rounded-2xl shadow-xl p-4 z-20 animate-float-delayed">
+                                    <div className="absolute right-0 bottom-16 bg-white rounded-card shadow-card p-5 z-20 animate-float-delayed border border-monza-cream">
                                         <div className="flex items-center gap-3">
-                                            <div className="w-16 h-16 bg-orange-100 rounded-lg overflow-hidden">
+                                            <div className="w-16 h-16 bg-monza-cream rounded-2xl overflow-hidden">
                                                 <img
                                                     src={chef.productCard.image}
                                                     alt={chef.productCard.name}
@@ -85,12 +85,12 @@ const ChefShowcase = () => {
                                                 />
                                             </div>
                                             <div>
-                                                <div className="font-semibold text-gray-800">{chef.productCard.name}</div>
-                                                <div className="text-sm text-gray-600">{chef.productCard.price}</div>
+                                                <div className="font-bold text-monza-brown">{chef.productCard.name}</div>
+                                                <div className="text-sm text-gray-600 font-medium">{chef.productCard.price}</div>
                                             </div>
                                         </div>
-                                        <button className="mt-3 w-full bg-orange-400 text-white text-sm font-semibold py-2 rounded-lg hover:bg-orange-500 transition">
-                                            Add Item
+                                        <button className="mt-3 w-full bg-monza-red text-white text-sm font-semibold py-2.5 rounded-button hover:bg-monza-dark transition-all duration-300 hover:scale-105">
+                                            Adicionar
                                         </button>
                                     </div>
                                 )}
@@ -99,17 +99,20 @@ const ChefShowcase = () => {
 
                         {/* Content Section */}
                         <div className="lg:w-1/2">
-                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-monza-brown mb-6 leading-tight">
                                 {chef.name}
                             </h2>
-                            <p className="text-lg text-gray-600 leading-relaxed mb-8">
+                            <p className="text-lg text-gray-700 leading-relaxed mb-8 font-medium">
                                 {chef.description}
                             </p>
-                            <button className="group bg-black text-white px-8 py-4 rounded-full font-semibold text-lg flex items-center gap-3 hover:bg-gray-800 transition-all duration-300 hover:scale-105 shadow-xl">
+                            <a
+                                href={`https://api.whatsapp.com/send?phone=5527999999999&text=Quero%20fazer%20um%20pedido`}
+                                className="group inline-flex bg-monza-red text-white px-8 py-4 rounded-button font-semibold text-lg items-center gap-3 hover:bg-monza-dark transition-all duration-300 hover:scale-105 shadow-card hover:shadow-card-hover"
+                            >
                                 <ShoppingBag className="w-5 h-5" />
-                                ORDER NOW
+                                FAZER PEDIDO
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                            </button>
+                            </a>
                         </div>
                     </div>
                 ))}
