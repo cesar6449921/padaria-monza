@@ -5,11 +5,11 @@ const ChefShowcase = () => {
     const chefs = [
         {
             id: 1,
-            name: 'Best Chef in Field',
+            name: 'Excelência que Você Prova no Primeiro Bite',
             image: 'https://images.unsplash.com/photo-1583394293214-28ded15ee548?w=800&h=800&fit=crop',
             rating: 4.5,
-            ratingLabel: 'Good Taste!',
-            description: 'A line of tasty and healthy specialities rich in fiber and vegetable protein baked specially for you and your loved ones, directly from the oven. Taste and See, the wonders of Mybakery.',
+            ratingLabel: 'Qualidade Premium',
+            description: 'Nossos chefs dominam a arte da panificação, criando receitas que unem textura, aroma e sabor em perfeita harmonia. Produtos frescos, feitos diariamente, para transformar qualquer momento em uma experiência especial.',
             position: 'left',
             productCard: {
                 name: 'Doughnut',
@@ -19,11 +19,11 @@ const ChefShowcase = () => {
         },
         {
             id: 2,
-            name: 'Discover Goodness',
+            name: 'Onde a Paixão Pela Padaria Ganha Forma',
             image: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&h=800&fit=crop',
             rating: 4.8,
-            ratingLabel: 'Excellent!',
-            description: 'A line of tasty and healthy specialities rich in fiber and vegetable protein baked specially for you and your loved ones, directly from the oven. Taste and See, the wonders of Mybakery.',
+            ratingLabel: 'Excelente!',
+            description: 'Aqui, cada criação nasce do cuidado, da técnica e do olhar atento dos nossos especialistas. Do forno à sua mesa, oferecemos produtos que celebram qualidade, tradição e o prazer de saborear algo realmente bem-feito.',
             position: 'right',
             productCard: {
                 name: 'Doughnut',
