@@ -1,54 +1,50 @@
 {
   "file": {
-    "name": "Food delivery app Ui kit (Community)",
-    "lastModified": "2025-12-04T21:24:07Z"
+    "name": "Replicating a bakery shop website (Community)",
+    "lastModified": "2025-12-04T22:19:43Z"
   },
   "node": {
-    "id": "513:4",
-    "name": "👋 Welcome!",
+    "id": "0:1",
+    "name": "Page 1",
     "type": "CANVAS"
   },
   "colors": [
-    "#f0d2cb",
-    "#ff70ce",
-    "#ff0600",
-    "#f79199",
-    "#ecf2f6",
-    "#c4c4c4",
+    "#f1f1f1",
+    "#010101",
     "#000000",
-    "#f5faff",
-    "#2934d0",
-    "#feffff",
+    "#ca6c26",
+    "#f5a66b",
+    "#d9d9d9",
+    "#222222",
+    "#f3a56b",
+    "#ff0000",
     "#ffffff",
-    "#debb90",
-    "#200e32"
+    "#182f83"
   ],
   "typography": {
     "fonts": [
-      "Inter",
-      "DM Mono",
-      "Gilroy-Bold",
-      "DM Sans"
+      "Sora"
     ],
     "sizes": [
-      23.999998092651367,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
       24,
-      28,
-      42,
-      45.60000228881836,
+      32,
       48,
-      61.04347610473633,
-      71.25,
-      80,
-      90,
+      60,
+      64,
       96,
-      150
+      128
     ],
     "weights": [
+      300,
       400,
-      500,
       600,
-      700
+      800
     ]
   }
 }

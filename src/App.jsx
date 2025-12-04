@@ -33,6 +33,7 @@ import {
 } from 'lucide-react';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ChefShowcase from './components/ChefShowcase';
 
 const navLinks = [
   { href: '#sobre', label: 'Sobre' },
@@ -629,6 +630,7 @@ export default function App() {
       <main>
         <HeroSection />
         <AboutSection />
+        <ChefShowcase />
         <ProductsSection />
         <EncomendasSection />
         <EmporioSection />
