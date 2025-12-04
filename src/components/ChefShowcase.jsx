@@ -60,38 +60,38 @@ const ChefShowcase = () => {
                                 </div>
 
                                 {/* Floating Rating Card */}
-                                <div className={`absolute ${chef.position === 'left' ? 'right-8 top-12' : 'left-8 top-12'
-                                    } bg-white rounded-card shadow-card p-5 z-20 animate-float border border-monza-cream`}>
-                                    <div className="flex items-center gap-3 mb-2">
-                                        <div className="w-12 h-12 bg-monza-red rounded-2xl flex items-center justify-center">
-                                            <Star className="w-6 h-6 text-white fill-white" />
+                                <div className={`absolute ${chef.position === 'left' ? 'right-4 md:right-8 top-8 md:top-12' : 'left-4 md:left-8 top-8 md:top-12'
+                                    } bg-white rounded-card shadow-card p-4 md:p-5 z-20 border border-monza-cream`}>
+                                    <div className="flex items-center gap-2 md:gap-3 mb-2">
+                                        <div className="w-10 h-10 md:w-12 md:h-12 bg-monza-red rounded-2xl flex items-center justify-center">
+                                            <Star className="w-5 h-5 md:w-6 md:h-6 text-white fill-white" />
                                         </div>
                                         <div>
-                                            <div className="text-lg font-bold text-monza-brown">{chef.rating}/5</div>
+                                            <div className="text-base md:text-lg font-bold text-monza-brown">{chef.rating}/5</div>
                                         </div>
                                     </div>
-                                    <div className="text-sm font-semibold text-monza-red">{chef.ratingLabel}</div>
+                                    <div className="text-xs md:text-sm font-semibold text-monza-red">{chef.ratingLabel}</div>
                                 </div>
 
                                 {/* Floating Product Card */}
                                 {chef.productCard && chef.position === 'right' && (
-                                    <div className="absolute right-0 bottom-16 bg-white rounded-card shadow-card p-5 z-20 animate-float-delayed border border-monza-cream">
+                                    <div className="absolute right-4 md:right-0 bottom-8 md:bottom-16 bg-white rounded-card shadow-card p-4 md:p-5 z-20 border border-monza-cream max-w-[280px]">
                                         <div className="flex items-center gap-3">
-                                            <div className="w-16 h-16 bg-monza-cream rounded-2xl overflow-hidden">
+                                            <div className="w-14 h-14 md:w-16 md:h-16 bg-monza-cream rounded-2xl overflow-hidden flex-shrink-0">
                                                 <img
                                                     src={chef.productCard.image}
                                                     alt={chef.productCard.name}
                                                     className="w-full h-full object-cover"
                                                 />
                                             </div>
-                                            <div>
-                                                <div className="font-bold text-monza-brown">{chef.productCard.name}</div>
-                                                <div className="text-sm text-gray-600 font-medium">{chef.productCard.price}</div>
+                                            <div className="flex-1 min-w-0">
+                                                <div className="font-bold text-monza-brown text-sm md:text-base truncate">{chef.productCard.name}</div>
+                                                <div className="text-xs md:text-sm text-gray-600 font-medium">{chef.productCard.price}</div>
                                             </div>
                                         </div>
                                         <a
                                             href="https://api.whatsapp.com/send?phone=5527999999999&text=Gostaria%20de%20ver%20o%20card%C3%A1pio"
-                                            className="mt-3 w-full bg-monza-red text-white text-sm font-semibold py-2.5 rounded-button hover:bg-monza-dark transition-all duration-300 hover:scale-105 inline-block text-center"
+                                            className="mt-3 w-full bg-monza-red text-white text-xs md:text-sm font-semibold py-2 md:py-2.5 rounded-button hover:bg-monza-dark transition-all duration-300 hover:scale-105 inline-block text-center"
                                         >
                                             Cardápio
                                         </a>
