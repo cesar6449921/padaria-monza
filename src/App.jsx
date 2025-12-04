@@ -132,36 +132,36 @@ function HeroSection() {
           alt="Pães saindo do forno"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#2b1611]/80 via-[#3E2723]/70 to-[#C8102E]/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#2b1611]/80 via-[#3E2723]/70 to-[#C8102E]/60 backdrop-blur-sm" />
       </div>
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-16">
         <div className="max-w-3xl">
-          <span className="inline-flex items-center gap-2 bg-white/20 text-white px-4 py-2 rounded-full text-xs uppercase tracking-[0.25em] font-bold">
+          <span className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md text-white px-5 py-2.5 rounded-button text-xs uppercase tracking-[0.25em] font-semibold border border-white/30">
             42 anos de tradição
           </span>
-          <h1 className="text-4xl md:text-6xl font-serif font-bold text-white leading-tight mt-6">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight mt-6">
             Tradição que aquece o coração há 42 anos
           </h1>
-          <p className="text-lg md:text-xl text-white/90 mt-4 max-w-2xl">
+          <p className="text-lg md:text-xl text-white/90 mt-4 max-w-2xl font-medium">
             60 mil pães fresquinhos todos os dias, mais de 300 produtos e 12 lojas espalhadas pela Grande Vitória para
             você viver o sabor Monza.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-8">
             <a
               href={`${whatsappLink}&text=Quero%20fazer%20uma%20encomenda%20com%20a%20Padaria%20Monza`}
-              className="bg-[#25D366] text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-green-600 transition flex items-center justify-center gap-2"
+              className="bg-[#25D366] text-white px-7 py-3.5 rounded-button font-semibold shadow-card hover:shadow-card-hover hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
             >
               <PhoneCall className="w-5 h-5" /> Fazer encomenda
             </a>
             <Link
               to="/cardapio"
-              className="bg-white text-monza-red px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-100 transition flex items-center justify-center gap-2"
+              className="bg-white text-monza-red px-7 py-3.5 rounded-button font-semibold shadow-card hover:shadow-card-hover hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
             >
               <BookOpen className="w-5 h-5" /> Ver Cardápio Digital
             </Link>
             <Link
               to="/lojas"
-              className="bg-transparent border border-white/60 text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition flex items-center justify-center gap-2"
+              className="bg-white/10 backdrop-blur-md border-2 border-white/60 text-white px-7 py-3.5 rounded-button font-semibold hover:bg-white/20 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
             >
               <MapPin className="w-5 h-5" /> Ver lojas
             </Link>
@@ -169,12 +169,12 @@ function HeroSection() {
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-12 max-w-4xl">
           {heroStats.map((stat) => (
-            <div key={stat.label} className="bg-white/15 backdrop-blur border border-white/20 rounded-xl p-4 text-white">
-              <div className="flex items-center gap-2 text-sm uppercase tracking-wide text-white/80">
+            <div key={stat.label} className="bg-white/15 backdrop-blur-lg border border-white/30 rounded-card p-5 text-white shadow-card hover:shadow-card-hover hover:scale-105 transition-all duration-300">
+              <div className="flex items-center gap-2 text-xs uppercase tracking-wider text-white/80 font-medium">
                 <stat.icon className="w-4 h-4" /> {stat.label}
               </div>
               <p className="text-3xl font-serif font-bold mt-2">{stat.value}</p>
-              <p className="text-sm text-white/80">{stat.desc}</p>
+              <p className="text-sm text-white/80 font-medium">{stat.desc}</p>
             </div>
           ))}
         </div>
@@ -185,41 +185,43 @@ function HeroSection() {
 
 function AboutSection() {
   return (
-    <section id="sobre" className="py-16 bg-white">
+    <section id="sobre" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-sm uppercase tracking-[0.3em] text-monza-red font-semibold mb-3">Quem somos</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-monza-brown mb-4">
+            <h2 className="text-3xl md:text-5xl font-serif font-bold text-monza-brown mb-5 leading-tight">
               Sabor em todos os momentos, com qualidade que atravessa gerações.
             </h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-700 leading-relaxed font-medium">
               A Padaria e Confeitaria Monza nasceu em 1983 e se tornou referência de panificação no Espírito Santo.
               Produção centralizada, equipe especializada e receitas artesanais garantem o mesmo padrão em cada uma das
               12 lojas.
             </p>
             <div className="flex flex-wrap gap-3 mt-6">
               {aboutPills.map((pill) => (
-                <span key={pill} className="px-4 py-2 rounded-full bg-monza-cream text-monza-brown font-semibold text-sm">
+                <span key={pill} className="px-5 py-2.5 rounded-button bg-monza-cream/50 backdrop-blur-sm text-monza-brown font-semibold text-sm border border-monza-cream hover:bg-monza-cream hover:scale-105 transition-all duration-300">
                   {pill}
                 </span>
               ))}
             </div>
           </div>
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="grid sm:grid-cols-2 gap-5">
             {aboutCards.map((card) => (
               <div
                 key={card.title}
-                className={`rounded-2xl p-6 shadow-soft ${card.variant === 'red'
+                className={`rounded-card p-7 shadow-card hover:shadow-card-hover hover:scale-105 transition-all duration-300 ${card.variant === 'red'
                   ? 'bg-monza-red text-white'
                   : card.variant === 'beige'
-                    ? 'bg-monza-beige text-monza-brown'
+                    ? 'bg-monza-beige/80 backdrop-blur-sm text-monza-brown border border-monza-beige'
                     : 'bg-white text-monza-brown border border-monza-cream'
                   }`}
               >
-                <card.icon className={`w-8 h-8 mb-3 ${card.variant === 'red' ? '' : 'text-monza-red'}`} />
+                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-4 ${card.variant === 'red' ? 'bg-white/20' : 'bg-monza-red/10'}`}>
+                  <card.icon className={`w-7 h-7 ${card.variant === 'red' ? 'text-white' : 'text-monza-red'}`} />
+                </div>
                 <h3 className="text-xl font-serif font-bold mb-2">{card.title}</h3>
-                <p className={`${card.variant === 'red' ? 'text-white/90' : 'text-gray-700'}`}>{card.text}</p>
+                <p className={`leading-relaxed font-medium ${card.variant === 'red' ? 'text-white/90' : 'text-gray-700'}`}>{card.text}</p>
               </div>
             ))}
           </div>
@@ -231,14 +233,14 @@ function AboutSection() {
 
 function ProductsSection() {
   return (
-    <section id="produtos" className="py-16 bg-[#fdf8f3]">
+    <section id="produtos" className="py-20 bg-monza-cream/30">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-10">
+        <div className="text-center mb-12">
           <p className="text-sm uppercase tracking-[0.3em] text-monza-red font-semibold">Portfólio completo</p>
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-monza-brown mt-2">
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-monza-brown mt-3">
             Mais de 300 produtos artesanais
           </h2>
-          <p className="text-gray-700 mt-4 max-w-3xl mx-auto">
+          <p className="text-gray-700 mt-4 max-w-3xl mx-auto text-lg font-medium">
             Do pão francês que perfuma o bairro aos bolos personalizados que transformam festas. Escolha sua categoria
             favorita e faça seu pedido.
           </p>
@@ -247,12 +249,15 @@ function ProductsSection() {
           {productCategories.map((item) => (
             <div
               key={item.title}
-              className="bg-white rounded-2xl p-6 shadow-soft border border-monza-cream hover:-translate-y-1 transition"
+              className="bg-white/80 backdrop-blur-sm rounded-card p-7 shadow-card border border-monza-cream/50 hover:shadow-card-hover hover:scale-105 hover:bg-white transition-all duration-300 group"
             >
-              <div className="flex items-center gap-3 text-monza-red font-semibold">
-                <item.icon className="w-6 h-6" /> {item.title}
+              <div className="flex items-center gap-3 text-monza-red font-semibold mb-3">
+                <div className="p-3 bg-monza-red/10 rounded-2xl group-hover:bg-monza-red/20 transition-colors duration-300">
+                  <item.icon className="w-6 h-6" />
+                </div>
+                <span className="text-lg">{item.title}</span>
               </div>
-              <p className="text-gray-700 mt-3">{item.text}</p>
+              <p className="text-gray-700 leading-relaxed font-medium">{item.text}</p>
             </div>
           ))}
         </div>
